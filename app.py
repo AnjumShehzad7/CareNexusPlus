@@ -22,7 +22,10 @@ def create_app():
 
     # Register blueprints
     from routes.auth_routes import auth_bp
+    from routes.appointment_routes import appointment_bp
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
+    app.register_blueprint(appointment_bp, url_prefix='/api/appointments')
+
 
     return app
 

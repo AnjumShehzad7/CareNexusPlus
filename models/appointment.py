@@ -9,4 +9,4 @@ class Appointment(db.Model):
     status = db.Column(db.String(20), default='Scheduled')  # Scheduled, Completed, Cancelled
 
     def __repr__(self):
-        return f"<Appointment {self.id} for {self.doctor_name}>"
+        return f"<Appointment {self.id} - {self.doctor_name}>"
